@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Data</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2193b0;
+            border-bottom: 2px solid #2193b0;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        p::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2193b0;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        /* Button styling (optional if adding a button) */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2193b0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #17637a;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for smooth entrance */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cookie Data</h2>
+        <p>Username: {{ username }}</p>
+        <p>Email: {{ email }}</p>
+    </div>
+</body>
+</html>
